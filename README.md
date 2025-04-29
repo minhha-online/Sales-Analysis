@@ -18,8 +18,6 @@ The project includes:
 👉 **Click here to view the full HTML notebook**:  
 📂 [Open Rendered Notebook (.html)](URL-TO-YOUR-HTML-FILE-HERE)
 
-> Replace the URL above with a link to your `.html` file hosted on GitHub Pages, nbviewer, or Netlify.
-
 ---
 
 ## 📂 Dataset
