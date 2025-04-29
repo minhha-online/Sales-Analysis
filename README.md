@@ -2,15 +2,23 @@
 
 ## 📚 Project Overview
 
-In this project, I analyzed sales and profitability data from a retail company selling furniture, office supplies, and technology products.  
-The goal was to uncover actionable insights that improve profit margins, reduce loss-making transactions, and support data-driven decision-making for sales strategy, discounting, and regional operations.
+This project analyzes the sales and profitability data of a retail company that sells furniture, office supplies, and technology products.  
+The goal is to uncover actionable business insights that improve profit margins, reduce loss-making transactions, and optimize decision-making in pricing, region-level sales strategy, and customer targeting.
 
-This end-to-end analysis includes:
-- Data cleaning and transformation
-- Feature engineering
+The project includes:
+- Data cleaning and feature engineering
 - Exploratory data analysis (EDA)
-- A basic classification model to predict order profitability
-- Final strategic business recommendations
+- A binary classification model to predict whether an order is profitable
+- Strategic recommendations for business improvement
+
+---
+
+## 🔗 📄 View the Full Interactive Notebook
+
+👉 **Click here to view the full HTML notebook**:  
+📂 [Open Rendered Notebook (.html)](URL-TO-YOUR-HTML-FILE-HERE)
+
+> Replace the URL above with a link to your `.html` file hosted on GitHub Pages, nbviewer, or Netlify.
 
 ---
 
@@ -18,82 +26,126 @@ This end-to-end analysis includes:
 
 - **Source:** Sample Superstore Dataset (CSV)
 - **Rows:** 9,994 transactions
-- **Key columns:** Sales, Profit, Discount, Category, Region, Segment, Ship Mode, Dates
-- **Tools Used:** Python, pandas, matplotlib, scikit-learn
+- **Fields Used:** Sales, Profit, Discount, Category, Segment, Region, Dates, etc.
+- **Tools:** Python, pandas, matplotlib, scikit-learn
 
 ---
 
 ## 🧹 Data Cleaning
 
-- Converted order and shipping dates into datetime format
-- Removed irrelevant serial column (`Row ID`)
-- Verified that no missing values existed
+- Converted date columns to datetime
+- Removed irrelevant columns (e.g. Row ID)
+- Checked for and confirmed no missing values
 
 ---
 
 ## 🛠 Feature Engineering
 
-Created the following new fields:
-- **Profit Margin (%):** Profit relative to sales per transaction
-- **Shipping Delay (Days):** Difference between order and ship date
-- **Discount Bucket:** Categorized discounts into strategic bands
-- **Profitability Label (0/1):** Indicates if an order was profitable
-
-These features supported deeper analysis and enabled a simple predictive model.
+Created the following business-driven features:
+- **Profit Margin (%):** Profit relative to sales
+- **Shipping Delay (Days):** Time between order and shipping
+- **Discount Bucket:** Categorized discount level
+- **Profitable Label:** 1 if profit > 0, otherwise 0
 
 ---
 
 ## 📊 Exploratory Data Analysis (EDA)
 
-### 🔹 Sales & Profit Distribution
-- Sales are heavily right-skewed — most orders are below \$3,000.
-- Profit distribution shows many low-profit orders and a notable number of **loss-making** transactions.
+Key patterns were visualized using histograms, scatter plots, and bar charts:
 
-### 🔹 Regional Performance
-- **West and East** regions perform well.
-- **South** generates sales but contributes to **net loss**, indicating inefficiency or pricing issues.
+### 🔹 Sales Distribution
 
-### 🔹 Discounting Impact
-- Strong **negative correlation** between discount rate and profit.
-- High-discount orders are often **unprofitable**, even with high sales.
+Most transactions are below $3,000, revealing a volume-driven sales model.
+
+![Sales Distribution](plots/sales_distribution.png)
+
+---
+
+### 🔹 Profit Distribution
+
+Profits vary widely. Some orders generate large losses, especially under heavy discounts.
+
+![Profit Distribution](plots/profit_distribution.png)
+
+---
+
+### 🔹 Sales and Profit by Region
+
+The West performs well; the South contributes to significant losses despite sales.
+
+![Region Performance](plots/region_performance.png)
+
+---
+
+### 🔹 Discount vs Profit
+
+Higher discount rates strongly correlate with reduced profitability.
+
+![Discount vs Profit](plots/discount_vs_profit.png)
 
 ---
 
 ## 🤖 Predictive Modeling
 
-### 🔹 Objective
-Predict whether a new order will be profitable using basic transaction features.
-
-### 🔹 Model
-- **Algorithm:** Logistic Regression (binary classification)
-- **Features Used:** Sales, Discount, Shipping Delay, Category, Region, Segment, Discount Bucket
-- **Accuracy:** ~94.3% on test data
-- **Precision & Recall:** High performance, especially on profitable orders
+- **Goal:** Predict if an order will be profitable based on transaction details.
+- **Model:** Logistic Regression (binary classifier)
+- **Features Used:** Sales, Discount, Shipping Delay, Category, Segment, Region
+- **Performance:** ~94.3% accuracy on the test set
+- **Interpretation:** The model is effective for pre-screening high- vs. low-margin transactions.
 
 ---
 
-## 🎯 Final Business Recommendations
+## 📈 Evaluation Summary
 
-1. **Reevaluate South Region Strategy:** Audit operations or pricing in this loss-leading area.
-2. **Tighten Discounting Policy:** Avoid over-discounting in low-margin segments.
-3. **Invest in High-Margin Products:** Focus on categories like Technology & Copiers.
-4. **Use Predictive Model:** Deploy classifier in sales tools to prioritize high-profit opportunities.
-5. **Optimize for Small Transactions:** Since most orders are small, focus on efficiency and bundling tactics.
+- **High precision and recall** for profitable orders
+- **Low false positives** (rarely misclassifies unprofitable as profitable)
+- **Business Use:** Can be used in CRM to flag risky deals or rank high-margin opportunities
+
+---
+
+## 🎯 Business Recommendations
+
+1. **Reevaluate the South Region**  
+   Sales are not converting to profit. Audit operations or consider pricing/product adjustments.
+
+2. **Tighten Discounting Strategy**  
+   Avoid blanket discounts. Use smarter segmentation and value-based incentives.
+
+3. **Invest in High-Margin Categories**  
+   Copiers and Technology perform best. Expand them in profitable regions.
+
+4. **Use Predictive Modeling in Sales Process**  
+   Integrate into CRM or lead-ranking tools to prioritize profitable deals.
+
+5. **Optimize for Small Transactions**  
+   Since most orders are small, focus on process efficiency and cross-sell bundling.
 
 ---
 
 ## 🔮 Future Work
 
-- **Cohort analysis** for customer lifetime value
-- **Simulations** of pricing and margin scenarios
-- **Product-region profitability matrix**
-- **Time-series forecasting** of revenue and margin
-- **Real-time alert system** for risky or loss-prone orders
+- Customer cohort & RFM analysis
+- Profit margin simulation under different discounting policies
+- Time series forecasting of revenue by category/region
+- Region-category profitability heatmap
+- Alert system for identifying potentially loss-making orders before confirmation
 
 ---
 
-## ✅ Outcome
+## 📁 Repository Structure
 
-This project demonstrates how data analysis, simple modeling, and strong business interpretation can lead to meaningful strategic decisions — even without advanced machine learning.
+sales-profit-analysis-retail/
+├── README.md
+├── sales_profit_analysis.ipynb
+├── sales_profit_analysis.html        
+├── cleaned_dataset.csv
+├── /data/
+│   └── Sample - Superstore.csv
+├── /plots/
+│   ├── sales_distribution.png
+│   ├── profit_distribution.png
+│   ├── region_performance.png
+│   ├── discount_vs_profit.png
 
-Great for early-stage analysts and portfolio demonstration.
+
+
