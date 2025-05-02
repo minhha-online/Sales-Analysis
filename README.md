@@ -1,6 +1,6 @@
-# 🛒 Sales and Profit Analysis for a Retail Company
+# Sales and Profit Analysis for a Retail Company
 
-## 📚 Project Overview
+## Project Overview
 
 This project analyzes the sales and profitability data of a retail company that sells furniture, office supplies, and technology products.  
 The goal is to uncover actionable business insights that improve profit margins, reduce loss-making transactions, and optimize decision-making in pricing, region-level sales strategy, and customer targeting.
@@ -13,14 +13,13 @@ The project includes:
 
 ---
 
-## 🔗 📄 View the Full Interactive Notebook
+##  View the Full Interactive Notebook
 
-👉 **Click here to view the full HTML notebook**:  
-📂 [Open Rendered Notebook (.html)](https://minhha-online.github.io/Sales-Analysis/sales_profit_analysis.html)
+**Click here to view the full HTML notebook**: [Open Rendered Notebook (.html)](https://minhha-online.github.io/Sales-Analysis/sales_profit_analysis.html)
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 - **Source:** Sample Superstore Dataset (CSV)
 - **Rows:** 9,994 transactions
@@ -29,7 +28,7 @@ The project includes:
 
 ---
 
-## 🧹 Data Cleaning
+## Data Cleaning
 
 - Converted date columns to datetime
 - Removed irrelevant columns (e.g. Row ID)
@@ -37,7 +36,7 @@ The project includes:
 
 ---
 
-## 🛠 Feature Engineering
+## Feature Engineering
 
 Created the following business-driven features:
 - **Profit Margin (%):** Profit relative to sales
@@ -47,11 +46,11 @@ Created the following business-driven features:
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Key patterns were visualized using histograms, scatter plots, and bar charts:
 
-### 🔹 Sales Distribution
+### Sales Distribution
 
 Most transactions are below $3,000, revealing a volume-driven sales model.
 
@@ -59,7 +58,7 @@ Most transactions are below $3,000, revealing a volume-driven sales model.
 
 ---
 
-### 🔹 Profit Distribution
+### Profit Distribution
 
 Profits vary widely. Some orders generate large losses, especially under heavy discounts.
 
@@ -67,7 +66,7 @@ Profits vary widely. Some orders generate large losses, especially under heavy d
 
 ---
 
-### 🔹 Sales and Profit by Region
+### Sales and Profit by Region
 
 The West performs well; the South contributes to significant losses despite sales.
 
@@ -83,7 +82,7 @@ Higher discount rates strongly correlate with reduced profitability.
 
 ---
 
-## 🤖 Predictive Modeling
+## Predictive Modeling
 
 - **Goal:** Predict if an order will be profitable based on transaction details.
 - **Model:** Logistic Regression (binary classifier)
@@ -93,7 +92,7 @@ Higher discount rates strongly correlate with reduced profitability.
 
 ---
 
-## 📈 Evaluation Summary
+## Evaluation Summary
 
 - **High precision and recall** for profitable orders
 - **Low false positives** (rarely misclassifies unprofitable as profitable)
@@ -101,7 +100,7 @@ Higher discount rates strongly correlate with reduced profitability.
 
 ---
 
-## 🎯 Business Recommendations
+## Business Recommendations
 
 1. **Reevaluate the South Region**  
    Sales are not converting to profit. Audit operations or consider pricing/product adjustments.
@@ -120,7 +119,7 @@ Higher discount rates strongly correlate with reduced profitability.
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 - Customer cohort & RFM analysis
 - Profit margin simulation under different discounting policies
@@ -128,22 +127,7 @@ Higher discount rates strongly correlate with reduced profitability.
 - Region-category profitability heatmap
 - Alert system for identifying potentially loss-making orders before confirmation
 
----
 
-## 📁 Repository Structure
-
-sales-profit-analysis-retail/
-├── README.md
-├── sales_profit_analysis.ipynb
-├── sales_profit_analysis.html        
-├── cleaned_dataset.csv
-├── /data/
-│   └── Sample - Superstore.csv
-├── /plots/
-│   ├── sales_distribution.png
-│   ├── profit_distribution.png
-│   ├── region_performance.png
-│   ├── discount_vs_profit.png
 
 
 
