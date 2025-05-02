@@ -16,7 +16,7 @@ The project includes:
 ## 🔗 📄 View the Full Interactive Notebook
 
 👉 **Click here to view the full HTML notebook**:  
-📂 [Open Rendered Notebook (.html)](URL-TO-YOUR-HTML-FILE-HERE)
+📂 [Open Rendered Notebook (.html)](https://minhha-online.github.io/Sales-Analysis/sales_profit_analysis.html)
 
 ---
 
